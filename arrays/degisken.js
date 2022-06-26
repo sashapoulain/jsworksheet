@@ -34,3 +34,10 @@ console.log(azalt); //-1
 carp = 20;
 carp *= 10;
 console.log(carp); //200
+
+//bol
+
+bol = 30;
+// bol = bol / 10;
+bol /= 10;
+console.log(bol);

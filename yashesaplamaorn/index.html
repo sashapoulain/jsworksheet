@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <title>Site Başlığı</title>
+    <style>
+        * {
+            text-align: center;
+        }
+        
+        label {
+            font-size: 20px;
+            padding: 20px;
+        }
+        
+        div {
+            margin: 30px;
+            font-size: 25px;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Yaş Hesaplama</h2>
+    <label>Doğum yılınızı giriniz</label>
+    <input type="text" name="yas" value="" />
+    <button>hesapla</button>
+    <div></div>
+    <script>
+        const getButton = document.querySelector("button");
+        getButton.addEventListener("click", function() {
+            const divEl = document.querySelector("div");
+            const yas = document.querySelector("input[name='yas']").value;
+            let result = 2022 - yas;
+            divEl.innerHTML = `Yaşınız ${result}`;
+
+            //input sadece number olmalı string olmamalı bunu sağlayan kodu ifin içerisine yazınız yazınız
+            if (result === 'string') {
+                divEl.innerHTML = `Sadece Sayı Giriniz`;
+            }
+
+
+            if (result < 0) {
+                divEl.innerHTML = `Yaşınız - sayı olamaz`;
+            }
+            if (result > 110) {
+                divEl.innerHTML = `Ölmüş olmalıydınız`;
+
+            }
+
+        });
+    </script>
+</body>
+
+</html>

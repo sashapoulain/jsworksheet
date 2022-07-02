@@ -1,9 +1,9 @@
 //https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
 
-//sayfa url
+//sayfa url yazdırma
 console.log(document.URL);
 console.log(document.baseURI);
-//location yada hostname
+//location yada hostname yazdırma
 console.log(document.location);
 console.log(document.location.hostname);
 console.log(document.location.pathname);

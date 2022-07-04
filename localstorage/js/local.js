@@ -1,13 +1,3 @@
-//locale veri nasıl kaydedilir
-/*
-localStorage.setItem("veri", JSON.stringify(veri));
-let veri = JSON.parse(localStorage.getItem("veri"));
-şeklinde 
-ama buradaki sıkıntı şu: en son yazılan veriyi kaydediyor.
-ornek.html ve ornek.js de ornekler mevcuttur.
-
-*/
-
 //localstorage ile çalışma orneği 1
 let d = document.querySelector("#deneme");
 let users = {

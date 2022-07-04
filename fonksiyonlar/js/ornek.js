@@ -1,21 +1,23 @@
-let artirBtn = document.querySelector("#increase");
-let azaltBtn = document.querySelector("#decrease");
-let counter = document.querySelector("#counter");
-artirBtn.addEventListener("click", arttir);
-azaltBtn.addEventListener("click", azalt);
+//2.yol
+//burada artık sayac 0 a değil localstorage içinde okunacak bilgiye eşit olucak
+// let sayac = 0;
+let sayac = JSON.parse(localStorage.getItem("sayac")) ?
+    Number(JSON.parse(localStorage.getItem("sayac"))) :
+    0;
+let counterDom = document.querySelector("#counter");
+let increaseDom = document.querySelector("#increase");
+let decreaseDom = document.querySelector("#decrease");
+counterDom.innerHTML = sayac;
 
-function arttir() {
-    counter.innerHTML++;
-    // console.log(counter.innerHTML);
-    /*
-      localStorage.setItem("counter", JSON.stringify(counter.innerHTML));
-      let c = JSON.parse(localStorage.getItem("counter"));
-      console.log(c);
-      mesela bu locale kaydediyor ama son veriyi kaydediyor.
-      */
-}
+increaseDom.addEventListener("click", clickEvent);
+decreaseDom.addEventListener("click", clickEvent);
 
-function azalt() {
-    counter.innerHTML--;
-    // console.log(counter.innerHTML);
+function clickEvent() {
+    if (this.id === "increase") {
+        sayac++;
+    } else {
+        sayac--;
+    }
+    localStorage.setItem("sayac", sayac);
+    counterDom.innerHTML = sayac;
 }
